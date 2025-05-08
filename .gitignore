@@ -1,0 +1,16 @@
+# Ignore log and output files
+*.log
+*.csv
+*.txt
+
+# Ignore local log folders
+sniffer_logs/
+bluetooth_logs/
+gps_logs/
+
+# Ignore backup folders created during sync
+macsniffer_backup_*/
+
+# Ignore system clutter
+*.DS_Store
+*.swp
