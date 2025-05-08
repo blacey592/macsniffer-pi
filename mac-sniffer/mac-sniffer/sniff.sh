@@ -10,7 +10,7 @@ LOG_FILE="${LOG_DIR}/sniff_log_${TIMESTAMP}.csv"
 mkdir -p "$LOG_DIR"
 
 # Header
-echo "timestamp,mac_address,signal_strength" > "$LOG_FILE"
+echo "timestamp,mac_address,signal_strength,rssi_class" > "$LOG_FILE"
 
 # Start sniffing
 timeout 300 tcpdump -e -i "$INTERFACE" -l type mgt subtype probe-req | \
@@ -19,8 +19,17 @@ while read -r line; do
     RSSI=$(echo "$line" | grep -oP 'signal strength \K-?[0-9]+')
     NOW=$(date '+%Y-%m-%d %H:%M:%S')
 
+    # Classify signal strength
+    if [ "$RSSI" -gt -60 ]; then
+        RANGE="STRONG"
+    elif [ "$RSSI" -gt -75 ]; then
+        RANGE="MEDIUM"
+    else
+        RANGE="WEAK"
+    fi
+
     if [[ "$MAC" =~ ^([0-9A-Fa-f]{2}:){5}[0-9A-Fa-f]{2}$ ]]; then
-        echo "$NOW,$MAC,$RSSI" >> "$LOG_FILE"
-        echo "$NOW $MAC $RSSI"
+        echo "$NOW,$MAC,$RSSI,$RANGE" >> "$LOG_FILE"
+        echo "$NOW $MAC $RSSI $RANGE"
     fi
 done
