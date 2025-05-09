@@ -1,0 +1,5 @@
+# Watchlist - Flagged MACs or OUIs (first 6 characters)
+A4:5E:60  # Samsung Device
+34:AB:95  # Apple Device
+98:09:CF  # Known Burner
+DE:AD:BE  # Test Device
