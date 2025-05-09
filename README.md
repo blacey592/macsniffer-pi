@@ -12,3 +12,16 @@ Use cases:
 - Mapping dwell times or movement patterns
 
 Make sure to enable monitor mode on your wireless adapter before running `sniff.sh`.
+
+## Watchlist Enhancer (MAC Sniffer Module)
+
+This upgrade flags MAC addresses during sniffing if they appear in a custom watchlist.
+
+### Features
+- Monitors for specific MACs or manufacturer OUIs
+- Logs any hits to a separate `watchlist_hits.csv`
+- Can be used to flag burner phones, known targets, or suspicious activity
+- Silent, passive, and field-deployable
+
+### Watchlist File
+Create this file:
