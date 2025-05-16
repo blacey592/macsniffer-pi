@@ -15,7 +15,7 @@ echo "Timestamp,SSID,BSSID,Channel,Signal_dBm,Encryption" > "$LOG_FILE"
 
 timeout 30s airodump-ng --output-format csv -w /tmp/rogue_scan "$IFACE" > /dev/null 2>&1
 
-CSV_FILE="/tmp/rogue_scan-01.csv"
+CSV_FILE="$LOG_DIR/rogue_scan-01.csv"
 if [[ -f "$CSV_FILE" ]]; then
     while IFS=',' read -r BSSID FirstSeen LastSeen Channel Speed Privacy Cipher Auth Power Beacons IV LANIP IDLength ESSID Key
     do
