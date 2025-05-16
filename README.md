@@ -1,27 +1,25 @@
-# MAC Sniffer
+# MACSniffer-Pi
 
-This module captures probe request frames from nearby Wi-Fi-enabled devices.
-Each detection includes:
-- Timestamp (UTC or local)
-- MAC address
-- Signal strength (RSSI)
+**Passive Surveillance Suite for Raspberry Pi 5**  
+Designed for covert MAC address logging, Bluetooth device detection, rogue access point scanning, and portable USB forensics. Built for law enforcement digital investigations.
 
-Use cases:
-- Surveillance of high-traffic areas
-- Capturing presence of known or unknown devices
-- Mapping dwell times or movement patterns
+## Tools Included
+- `sniff.sh` – Passive MAC address logger (Wi-Fi)
+- `btlogger.sh` – Bluetooth device logger
+- `rogue_ap_detector.sh` – Rogue access point scanner
+- `usb_logger.sh` – USB connection logger
+- `sd_cloner.sh` – Quick forensic SD card duplicator
 
-Make sure to enable monitor mode on your wireless adapter before running `sniff.sh`.
+## Deployment Setup
+1. Flash provided `.img` to SD card.
+2. Plug into Raspberry Pi 5 with external Wi-Fi adapter.
+3. Boots headless and launches `launcher.sh` menu after 30s of inactivity.
+4. Data saved to `/logs/` with timestamped subfolders.
 
-## Watchlist Enhancer (MAC Sniffer Module)
+## Field Considerations
+- GPS excluded by default (concealment priority).
+- Use external battery for covert ops.
+- System logs locally only; no exfiltration by design.
 
-This upgrade flags MAC addresses during sniffing if they appear in a custom watchlist.
-
-### Features
-- Monitors for specific MACs or manufacturer OUIs
-- Logs any hits to a separate `watchlist_hits.csv`
-- Can be used to flag burner phones, known targets, or suspicious activity
-- Silent, passive, and field-deployable
-
-### Watchlist File
-Create this file:
+## Disclaimer
+Law enforcement use only. Ensure legal compliance with local wiretap, tracking, and privacy laws.
