@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LOG_DIR="/home/pi/bluetooth_logs"
+LOG_DIR="/home/pi/macsniffer-pi/logs"
 TIMESTAMP=$(date '+%Y-%m-%d_%H-%M-%S')
 LOG_FILE="${LOG_DIR}/bluetooth_log_${TIMESTAMP}.csv"
 
