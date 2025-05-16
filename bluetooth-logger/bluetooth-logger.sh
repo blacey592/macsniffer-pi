@@ -2,7 +2,7 @@
 
 LOG_DIR="/home/pi/bluetooth_logs"
 TIMESTAMP=$(date '+%Y-%m-%d_%H-%M-%S')
-LOG_FILE="${LOG_DIR}/bt_log_${TIMESTAMP}.csv"
+LOG_FILE="${LOG_DIR}/bluetooth_log_${TIMESTAMP}.csv"
 
 mkdir -p "$LOG_DIR"
 
