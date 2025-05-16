@@ -2,9 +2,8 @@
 
 # Rogue AP Detector - Auto Scan & Log Script
 
-LOG_DIR="$HOME/rogue_ap_logs"
+LOG_DIR="/home/pi/macsniffer-pi/logs"
 mkdir -p "$LOG_DIR"
-DATESTAMP=$(date "+%Y-%m-%d_%H-%M-%S")
 LOG_FILE="$LOG_DIR/rogue_aps_$DATESTAMP.csv"
 
 IFACE="wlan1"  # Replace with your external Wi-Fi adapter's interface name
