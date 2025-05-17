@@ -1,8 +1,8 @@
 #!/bin/bash
 
-LOG_DIR="/home/pi/usb_logger/logs"
+LOG_DIR="/home/pi/macsniffer-pi/logs"
 mkdir -p "$LOG_DIR"
-LOG_FILE="$LOG_DIR/usb_log.csv"
+LOG_FILE="$LOG_DIR/usb_events.csv"
 
 ACTION=$(echo "$ACTION")
 TIMESTAMP=$(date "+%Y-%m-%d %H:%M:%S")
