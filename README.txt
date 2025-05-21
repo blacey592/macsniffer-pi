@@ -1,6 +1,6 @@
-SURVEILLANCE_LOOP_MONITOR
+UC_CSAM_OSINT_SCRAPER
 
-Flags repeat detections of previously observed devices, indicating potential loops or returns.
+Offline UC profile keyword scraper that scans text files for CSAM-related terms.
 
 Usage: Run with Python 3.
 Each module is designed to operate standalone with default folders.
