@@ -1,6 +1,6 @@
-LOCAL_HASHLIST_TRACKER
+ALIAS_THREAT_MATRIX
 
-Tracks and manages SHA256 hashes of files, flagging duplicates across investigations.
+Correlates known device aliases with log entries, identifying frequent or suspicious activity.
 
 Usage: Run with Python 3.
 Each module is designed to operate standalone with default folders.
