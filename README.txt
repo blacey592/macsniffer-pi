@@ -1,6 +1,6 @@
-CASE_DNA_GENERATOR
+log_aggregator.py
 
-Generates SHA256 hashes for files to create a digital fingerprint of each case.
+Merges MAC, Bluetooth, USB, and AP logs into a single, sorted CSV timeline.
 
-Usage: Run with Python 3.
-Each module is designed to operate standalone with default folders.
+Usage:
+python3 log_aggregator.py
