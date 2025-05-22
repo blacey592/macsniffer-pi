@@ -1,6 +1,6 @@
-log_aggregator.py
+mac_map_trail.py
 
-Merges MAC, Bluetooth, USB, and AP logs into a single, sorted CSV timeline.
+Plots MAC address sightings on a map using timestamped lat/lon data.
 
 Usage:
-python3 log_aggregator.py
+python3 mac_map_trail.py
